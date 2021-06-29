@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>サンプル</title>
+</head>
+<body>
+
+<?php
+
+$dbname = "sqlite:pdb.db";
+$usrname = "";
+$psword = "";
+
+$db = new PDO($dbname, $usrname, $$psword);
+$db->exec("DROP TABLE IF EXISTS product");
+$db->exe("CREATE TABLE product(id INTEGER PRIMARY KEY, name STRING, price INTEGER)");
+
